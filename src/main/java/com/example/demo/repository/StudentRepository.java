@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 public interface StudentRepository extends JpaRepository<StudentEntity, Integer> {
-    @Query(value = "SELECT * FROM student")
+    @Query(value = "SELECT * FROM student", nativeQuery = true)
     List<StudentEntity> findAllStudent();
 }
